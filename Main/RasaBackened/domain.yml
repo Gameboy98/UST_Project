@@ -1,0 +1,78 @@
+session_config:
+  session_expiration_time: 480
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- bot_challenge
+- thanks
+- password
+- mood_great
+- userID
+- mood_unhappy
+- food
+- emergency
+- quiz_timetable
+- quiz_marks
+- timetable
+- attendence
+entities:
+- userID
+- password
+- subject
+slots:
+  password:
+    type: unfeaturized
+  requested_slot:
+    type: unfeaturized
+  subject:
+    type: unfeaturized
+  userID:
+    type: unfeaturized
+responses:
+  utter_greet:
+  - text: Hi There, Welcome to the University. My name is Michelle and I am a ChatBot.
+      I can tell you all about our university and might help you with the questions
+      you might have
+  utter_ask_userID:
+  - text: Please provide your userID in format "my userID is ...."
+  utter_ask_password:
+  - text: Please provide me with your password in format "my password is ...."
+  utter_help:
+  - text: Hi {name} How can I Help you with?
+  utter_wrong:
+  - text: Wrong Credentials
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_emergency:
+  - text: 'Health emergency number: 0120-1234567 and Security emergency number: 0120-7654321'
+  utter_food:
+  - text: Today's Lunch is Daal Roti and evening snack is samosa
+  utter_attendece:
+  - text: Your attendence in ECSE344L is 80%
+  utter_timetable:
+  - text: "You have a class ECSE379L 3:40pm, ECSE334L 4:40pm"
+actions:
+- utter_greet
+- utter_password
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- utter_help
+- utter_wrong
+- utter_ask_userID
+- utter_ask_password
+- utter_emergency
+- utter_food
+forms:
+- form_info
